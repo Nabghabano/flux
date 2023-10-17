@@ -18,7 +18,7 @@ fluxctl
 flux bootstrap github \
   --token-auth \
   --owner=Nabghabano \
-  --repository=docker-development-youtube-series \
+  --repository=flux \
   --path=kubernetes/fluxcd/repositories/infra-repo/clusters/dev-cluster \
   --personal \
   --branch fluxcd-2022
@@ -43,7 +43,7 @@ $GHUSER = "Nabghabano"
 fluxctl install `
 --git-user=${Nabghabano} `
 --git-email=${Nabghabano}@users.noreply.github.com `
---git-url=git@github.com:${Nabghabano}/docker-development-youtube-series `
+--git-url=git@github.com:${Nabghabano}/flux `
 --git-path=kubernetes/configmaps,kubernetes/secrets,kubernetes/deployments `
 --git-branch=flux-test `
 --namespace=flux | kubectl apply -f -
@@ -55,7 +55,7 @@ fluxctl list-workloads
 fluxctl identity
 
 
-https://github.com/Nabghabano/docker-development-youtube-series/settings/keys/new
+https://github.com/Nabghabano/flux/settings/keys/new
 
 fluxctl sync
 

@@ -15,6 +15,19 @@ Open a new terminal and try
 ```
 fluxctl
 ```
+flux bootstrap github \
+  --token-auth \
+  --owner=Nabghabano \
+  --repository=docker-development-youtube-series \
+  --path=kubernetes/fluxcd/repositories/infra-repo/clusters/dev-cluster \
+  --personal \
+  --branch fluxcd-2022
+
+flux check
+
+# flux manages itself using GitOps objects:
+kubectl -n flux-system get GitRepository
+kubectl -n flux-system get Kustomization
 
 # 4 - Installing Flux
 
